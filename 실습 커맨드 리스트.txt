@@ -61,3 +61,25 @@ Apache Kafka 입문과 활용
 # 카프카 활용 실습 토픽 데이터 확인
 29 ./kafka-console-consumer.sh --bootstrap-server {aws ec2 public ip}:9092 --topic my-computer-metric --from-beginning
 30 tail -f *.csv
+
+
+
+#Q&A
+저장된 데이터의 순서를 어떻게 보장?
+토픽에 Timestamp와 같은 순서 값을 포함
+
+컨슈머 배포 전략?
+Gradeful shutdown으로 잘 중단되도록 하고, 배포 기간 동안 중단을 고려해서 Application 설계
+
+카프카 클라이언트의 성능 영향 요소는?
+네트워크, 쓰레드(CPU), 처리 로직, 카프카 옵션(메모리, 수)
+
+카프카 브로커 장애 시 클라이언트 영향?
+syncCommit이 안됨. 브로커 복구(재기동) 이후 중복 처리가 안되도록 클라이언트에서 offset 값 등을 Singlton으로 저장 및 비교 로직으로 중복 처리 방지...
+
+도서 추천?
+고승범님 Kafka 책, Orally Kafka 핵심 가이드
+
+카프카 운영 모니터링은?
+  카프카 burrow
+  카프카 client의 telegraf matrix
