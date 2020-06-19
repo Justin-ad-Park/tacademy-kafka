@@ -78,8 +78,14 @@ Gradeful shutdown으로 잘 중단되도록 하고, 배포 기간 동안 중단�
 syncCommit이 안됨. 브로커 복구(재기동) 이후 중복 처리가 안되도록 클라이언트에서 offset 값 등을 Singlton으로 저장 및 비교 로직으로 중복 처리 방지...
 
 도서 추천?
-고승범님 Kafka 책, Orally Kafka 핵심 가이드
+카프카, 데이터 플랫폼의 최강자 
+고승범님 저
+
+카프카 핵심 가이드
+O,Reilly 
+
 
 카프카 운영 모니터링은?
-  카프카 burrow
+  카프카 Burrow
   카프카 client의 telegraf matrix
+
